@@ -1,13 +1,13 @@
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
+ * UTFPR - Universidade Tecnológica Federal do Paraná DAINF - Departamento
+ * Acadêmico de Informática IF62C - Fundamentos de Programação 2
+ *
+ * Template de projeto de programa Java usando Maven.
  *
  * @author DANIEL
  */
@@ -17,5 +17,25 @@ public class Pratica31 {
     private static GregorianCalendar dataNascimento;
     private static Date inicio;
     private static Date fim;
+    
+    public static void main(String[] args) {
+        
+        Date inicio = new Date();
+        
+        String meuNome = "Daniel Anderson de Freitas";
+        
+        System.out.println(meuNome.toUpperCase());   
+        System.out.println(meuNome.substring(16) + ", " + meuNome.charAt(0) + ". " + meuNome.charAt(7) + ".\n");
+        
+        GregorianCalendar dataNascimento = new GregorianCalendar(1988, Calendar.AUGUST, 12);
+        GregorianCalendar hoje = new GregorianCalendar();
+                
+        System.out.println((hoje.getTimeInMillis() - dataNascimento.getTimeInMillis()) / (24 * 60 * 60 * 1000));
+        
+        Date fim = new Date();
+        
+        System.out.println(fim.getTime() - inicio.getTime());
+        
+    }
     
 }
